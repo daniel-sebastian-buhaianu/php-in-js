@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>js+php</title>
+	</head>
+
+	<body>
+		<h1>testing php+js</h1>
+
+		<script>
+			const result = [
+				{id: 1, name: 'a'},
+				{id: 2, name: 'b'},
+				{id: 3, name: 'c'}
+			];
+
+			let params = {
+	   			method: "POST",
+	   			headers: {
+	      			"Content-Type": "application/json; charset=utf-8"
+	   			},
+	   			body: JSON.stringify(result)
+			};
+
+			fetch("php/script.php", params);
+		</script>
+	</body>
+</html>
